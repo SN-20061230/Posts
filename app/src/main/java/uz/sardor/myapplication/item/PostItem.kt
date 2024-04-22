@@ -17,31 +17,17 @@ import uz.sardor.myapplication.model.Post
 
 @Composable
 fun PostItem(post: Post) {
-//    Card(modifier = Modifier.fillMaxWidth()){
-//
-//        Column(modifier = Modifier.fillMaxWidth().padding(5.dp)){
-//
-//
-//           Text( text = post.title, fontSize = 20.sp)
-//
-//            Text( text = post.body, fontSize = 16.sp)
-//        }
-//
-//    }
-
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
-//        elevation = 4.dp,
+            .padding(15.dp),
         shape = RoundedCornerShape(8.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             BasicTextField(
                 value = post.title,
                 onValueChange = { /* TODO: Handle title change */ },
-//                textStyle = MaterialTheme.typography.h6.copy(color = Color.Black),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 8.dp)
@@ -49,7 +35,6 @@ fun PostItem(post: Post) {
             BasicTextField(
                 value = post.body,
                 onValueChange = { /* TODO: Handle description change */ },
-//                textStyle = MaterialTheme.typography.body1.copy(color = Color.Black),
                 modifier = Modifier.fillMaxWidth()
             )
         }

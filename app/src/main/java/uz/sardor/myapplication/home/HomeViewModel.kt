@@ -25,7 +25,11 @@ class HomeViewModel(val model: HomeModel):ViewModel() {
             _posts.value = model.getAllPosts()
         }
     }
-
+    fun searchProduct(name:String){
+        viewModelScope.launch {
+            _posts.value = model.searchPosts(name)
+        }
+    }
     init{
         getAllPosts()
     }

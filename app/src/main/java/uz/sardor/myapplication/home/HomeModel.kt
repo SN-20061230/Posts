@@ -9,5 +9,7 @@ class HomeModel(private val api:APIService) {
     suspend fun getAllPosts():PostData{
         return api.getPosts()
     }
-
+    suspend fun searchPosts(postName:String): PostData{
+        return api.searchByName(postName)
+    }
 }
