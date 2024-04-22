@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import uz.sardor.myapplication.model.Post
+import uz.sardor.myapplication.model.PostData
 import uz.sardor.myapplication.networking.APIClient
 import uz.sardor.myapplication.networking.APIService
 
@@ -16,8 +16,8 @@ class HomeViewModel(val model: HomeModel):ViewModel() {
 //    val posts: MutableState<List<Post>> = mutableStateOf(emptyList())
 
 
-    private var _posts:MutableStateFlow<List<Post>?> = MutableStateFlow(null)
-    val posts:StateFlow<List<Post>?> = _posts
+    private var _posts:MutableStateFlow<PostData?> = MutableStateFlow(null)
+    val posts:StateFlow<PostData?> = _posts
 
 
     private fun getAllPosts(){
