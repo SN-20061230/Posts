@@ -1,4 +1,4 @@
-package uz.sardor.myapplication.home
+package uz.sardor.myapplication.screens.home
 
 
 import androidx.compose.foundation.layout.Column
@@ -24,12 +24,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import uz.sardor.myapplication.AnimatedShimmer
 import uz.sardor.myapplication.item.PostItem
 
 @Composable
-fun HomeView(viewModel: HomeViewModel) {
+fun HomeView(viewModel: HomeViewModel, navController: NavController) {
     var searchText by remember { mutableStateOf(TextFieldValue()) }
 
     val list = viewModel.posts.collectAsState().value

@@ -1,4 +1,4 @@
-package uz.sardor.myapplication.home
+package uz.sardor.myapplication.screens.home
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -12,8 +12,6 @@ import uz.sardor.myapplication.networking.APIClient
 import uz.sardor.myapplication.networking.APIService
 
 class HomeViewModel(val model: HomeModel):ViewModel() {
-//    private val apiService = APIClient.api
-//    val posts: MutableState<List<Post>> = mutableStateOf(emptyList())
 
 
     private var _posts:MutableStateFlow<PostData?> = MutableStateFlow(null)

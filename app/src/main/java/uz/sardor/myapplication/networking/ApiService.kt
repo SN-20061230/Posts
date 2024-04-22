@@ -10,10 +10,10 @@ interface APIService {
     @GET("/posts")
     suspend fun getPosts(): PostData
 
-//    @GET("products/{id}")
-//    suspend fun getPost(@Path("id") id: Int): PostData
-
-
     @GET("/posts/search")
     suspend fun searchByName(@Query("q") name: String): PostData
+
+    @GET("/post/{id}")
+    suspend fun getPost(@Path("id") id: Int): Post
+
 }

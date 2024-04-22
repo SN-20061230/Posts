@@ -30,12 +30,23 @@ fun PostItem(post: Post) {
                 onValueChange = { /* TODO: Handle title change */ },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 8.dp)
+                    .padding(bottom = 8.dp),
+                enabled = false
             )
             BasicTextField(
                 value = post.body,
                 onValueChange = { /* TODO: Handle description change */ },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                enabled = false
+
+            )
+
+            BasicTextField(
+                value = post.id.toString(),
+                onValueChange = { /* TODO: Handle description change */ },
+                modifier = Modifier.fillMaxWidth(),
+                enabled = false
+
             )
         }
     }

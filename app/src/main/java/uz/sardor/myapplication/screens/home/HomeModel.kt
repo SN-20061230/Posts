@@ -1,4 +1,4 @@
-package uz.sardor.myapplication.home
+package uz.sardor.myapplication.screens.home
 
 import uz.sardor.myapplication.model.Post
 import uz.sardor.myapplication.model.PostData
