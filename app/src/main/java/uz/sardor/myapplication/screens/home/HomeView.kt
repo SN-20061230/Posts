@@ -84,7 +84,7 @@ fun HomeView(viewModel: HomeViewModel, navController: NavController) {
 
         if (list != null) {
             items(list.posts.size) {
-                PostItem(post = list.posts[it])
+                PostItem(post = list.posts[it], navController)
             }
         }
     }
