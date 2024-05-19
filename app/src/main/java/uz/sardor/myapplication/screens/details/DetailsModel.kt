@@ -5,8 +5,8 @@ import uz.sardor.myapplication.networking.APIService
 
 class DetailsModel(private val api: APIService) {
 
-//    suspend fun getPost(postId :Int): Post {
-//        return api.getPost(postId)
-//    }
+    suspend fun getPost(postId :Int): Post {
+        return api.getPost(postId)
+    }
 
 }

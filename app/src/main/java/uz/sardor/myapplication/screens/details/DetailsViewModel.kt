@@ -8,18 +8,23 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import uz.sardor.myapplication.model.Post
+import uz.sardor.myapplication.model.PostData
 
 
 class DetailsViewModel(val model: DetailsModel, val id:Int): ViewModel() {
-//    private var _post: MutableStateFlow<Post?> = MutableStateFlow(null)
-//    val post: StateFlow<Post?> = _post
-//
-//    fun getPost(){
-//
-//        viewModelScope.launch {
-//
-//            _post.value = model.getPost(id)
-//        }
-//    }
+    private var _posts:MutableStateFlow<Post?> = MutableStateFlow(null)
+    val posts:StateFlow<Post?> = _posts
+
+
+    init {
+        getPost()
+    }
+    private fun getPost(){
+
+        viewModelScope.launch {
+
+            _posts.value = model.getPost(id)
+        }
+    }
 
 }

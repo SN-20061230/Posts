@@ -25,7 +25,6 @@ import uz.sardor.myapplication.navigation.Screens
 @Composable
 fun PostItem(post: Post, navController: NavController) {
 
-//    val list = listOf(post.tags)
 
     val initialText = post.tags.joinToString(separator = ", ") // Join tags with comma separator
 
@@ -36,7 +35,7 @@ fun PostItem(post: Post, navController: NavController) {
             .fillMaxWidth()
             .padding(15.dp)
             .clickable {
-//            navController.navigate(Screens.DetailsView.route)
+            navController.navigate("details/${post.id}")
             }
         ,
         shape = RoundedCornerShape(8.dp)

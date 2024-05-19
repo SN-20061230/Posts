@@ -34,6 +34,8 @@ fun HomeView(viewModel: HomeViewModel, navController: NavController) {
     var searchText by remember { mutableStateOf(TextFieldValue()) }
 
     val list = viewModel.posts.collectAsState().value
+
+//    val items = viewModel.items.observeAsState().value
     var loading by remember { mutableStateOf(true) }
     LaunchedEffect(
         key1 = true,
@@ -83,8 +85,8 @@ fun HomeView(viewModel: HomeViewModel, navController: NavController) {
     LazyColumn(modifier = Modifier.padding(top = 80.dp)) {
 
         if (list != null) {
-            items(list.posts.size) {
-                PostItem(post = list.posts[it], navController)
+            items(list.posts.size) { item->
+                PostItem(post = list.posts[item], navController)
             }
         }
     }

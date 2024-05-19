@@ -51,13 +51,13 @@ class MainActivity : ComponentActivity() {
                             val homeViewModel = HomeViewModel(homeModel)
                             HomeView(viewModel = homeViewModel,navController = navController)
                         }
-                        composable(route = Screens.DetailsView.route, arguments = listOf(navArgument("id") {
+                        composable(route = Screens.DetailsView.route, arguments = listOf(navArgument("key") {
                             type = NavType.IntType
                         })) {
-                            val id = it.arguments?.getInt("id")!!
+                            val id = it.arguments?.getInt("key")!!
                             val detailsModel = DetailsModel(api)
                             val detailViewModel = DetailsViewModel(detailsModel, id)
-                            DetailsView(viewModel = detailViewModel,id,navController = navController)
+                            DetailsView(viewModel = detailViewModel)
                         }
                     }
 
