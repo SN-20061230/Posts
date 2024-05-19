@@ -16,5 +16,6 @@ interface APIService {
     @GET("/post/{id}")
     suspend fun getPost(@Path("id") id: Int): Post
 
-
+    @GET("/post/user/{id}")
+    suspend fun getUserPosts(@Path("id") id: Int): PostData
 }

@@ -12,4 +12,8 @@ class HomeModel(private val api:APIService) {
     suspend fun searchPosts(postName:String): PostData{
         return api.searchByName(postName)
     }
+
+    suspend fun getUserPosts(id: Int): PostData {
+        return api.getUserPosts(id)
+    }
 }
